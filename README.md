@@ -13,8 +13,7 @@ sentinelLab/
 │   └── push/
 │       ├── sap_abapauditlog.sh         # Script for pushing SAP ABAP audit logs to Azure Monitor Logs
 │       ├── Custom-Pathlock_TDnR.sh     # Script for pushing Pathlock TDnR data to Azure Monitor Logs
-│       ├── readme.md                   # Documentation for the push scripts
-│       └── response.json               # Example or output response file
+│       └── readme.md                   # Documentation for the push scripts
 ```
 
 ### scripts/push/
@@ -23,7 +22,7 @@ This folder contains all scripts and documentation for pushing data to Azure Mon
 - **sap_abapauditlog.sh**: For SAP ABAP audit log ingestion.
 - **Custom-Pathlock_TDnR.sh**: For Pathlock TDnR data ingestion.
 - **readme.md**: Detailed usage, setup, and deployment instructions for the scripts.
-- **response.json**: Example or output file for API responses.
+
 
 Refer to `scripts/push/readme.md` for detailed instructions on setup, usage, and deployment of each script and the required Sentinel data connectors.
 

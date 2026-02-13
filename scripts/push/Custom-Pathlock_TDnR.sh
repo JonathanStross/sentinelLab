@@ -190,7 +190,7 @@ INGEST_URL="https://${DCE_HOST}/dataCollectionRules/${DCR_ID}/streams/${STREAM}?
 
 echo "POST -> $INGEST_URL"
 
-HTTP_STATUS=$(curl -sS -o response.json -w "%{http_code}" \
+HTTP_STATUS=$(curl -sS -w "%{http_code}" \
   -X POST "$INGEST_URL" \
   -H "Authorization: Bearer ${ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
@@ -201,7 +201,6 @@ echo "HTTP Status: $HTTP_STATUS"
 
 if [[ "$HTTP_STATUS" != "200" && "$HTTP_STATUS" != "202" && "$HTTP_STATUS" != "204" ]]; then
   echo "ERROR: Ingestion failed"
-  cat response.json
   exit 1
 fi
 
